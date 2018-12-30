@@ -17,4 +17,18 @@ client.on("guildMemberAdd", member => {
 }).catch(console.error)
 })
 
+client.on("guildMemberAdd", member => {
+  member.createDM().then(function (channel) {
+  return channel.send(` 
+**
+ هلا والله
+❤ ممكن تدخل سيرفر حبي
+                     [ https://discord.gg/WPzRQ3F ] 
+الدعووة خاصة لك ... [ ${member}  ]
+سيرفر يحتاج دعم  حبي 
+ مضمون %100
+**`) 
+}).catch(console.error)
+})
+
 client.login(process.env.BOT_TOKEN);
